@@ -1,0 +1,12 @@
+---
+const { title, text, id, img } = Astro.props
+---
+
+<article class="flex gap-7">
+  <img src={img} alt={title} class="w-28" />
+  <div>
+    <h4 class="text-SoftOrange text-3xl font-bold mb-4">0{id}</h4>
+    <h2 class="font-extrabold text-lg my-5">{title}</h2>
+    <p>{text}</p>
+  </div>
+</article>

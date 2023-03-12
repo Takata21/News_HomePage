@@ -1,7 +1,90 @@
 ---
+import Card from '../components/Card.astro'
 import Layout from '../layouts/Layout.astro'
+const info = [
+  {
+    id: 1,
+    title: 'Reviving Retro PCs',
+    text: 'What happens when old PCs are given modern upgrades?',
+    img: 'image-retro-pcs.jpg',
+  },
+  {
+    id: 2,
+    title: 'Top 10 Laptops of 2022',
+    text: 'Our best picks for various needs and budgets.',
+    img: 'image-top-laptops.jpg',
+  },
+  {
+    id: 3,
+    title: 'The Growth of Gaming',
+    text: 'How the pandemic has sparked fresh opportunities.',
+    img: 'image-gaming-growth.jpg',
+  },
+]
 ---
 
 <Layout title="New">
-  <main>hOLA</main>
+  <main>
+    <section class="m-5">
+      <article>
+        <img src="/image-web-3-mobile.jpg" alt="" />
+        <h1 class="text-5xl font-extrabold my-6">
+          The Bright Future of Web 3.0?
+        </h1>
+        <p class="text-DarkGrayishBlue">
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+        <a
+          href=""
+          class="bg-SoftRed text-white py-4 px-7 inline-block my-7 uppercase font-bold outline-none -tracking-[-6px] hover:bg-VeryDarkBlue"
+          >Read more</a
+        >
+      </article>
+      <div class="bg-VeryDarkBlue text-white p-5">
+        <h2 class="text-SoftOrange text-2xl font-bold my-3">News</h2>
+        <article class="py-5 border-b-[1px] border-OffWhite pb-5">
+          <h6 class="text-xl font-bold my-3">Hydrogen VS Electric Cars</h6>
+          <p class="text-GrayishBlue text-base">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </article>
+        <article class="py-5 border-b-[1px] border-OffWhite pb-5">
+          <h6 class="text-xl font-bold my-3">The Downsides of AI Artistry</h6>
+          <p class="text-GrayishBlue text-base">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </article>
+        <article class="py-5">
+          <h6 class="text-xl font-bold my-3">Is VC Funding Drying Up?</h6>
+          <p class="text-GrayishBlue text-base">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="my-9 mx-5 flex flex-col gap-8">
+      {
+        info.map((item) => (
+          <Card
+            id={item.id}
+            title={item.title}
+            text={item.text}
+            img={item.img}
+          />
+        ))
+      }
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a
+      >. Coded by <a href="#">MTakata</a>.
+    </div>
+  </footer>
 </Layout>

@@ -11,6 +11,9 @@ module.exports = {
         DarkGrayishBlue: '#5d5f79',
         VeryDarkBlue: '#00001a',
       },
+      screens: {
+        md: '720px',
+      },
     },
     plugins: [],
   },
