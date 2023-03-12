@@ -25,23 +25,27 @@ const info = [
 
 <Layout title="New">
   <main>
-    <section class="m-5">
-      <article>
-        <img src="/image-web-3-mobile.jpg" alt="" />
-        <h1 class="text-5xl font-extrabold my-6">
-          The Bright Future of Web 3.0?
-        </h1>
-        <p class="text-DarkGrayishBlue">
-          We dive into the next evolution of the web that claims to put the
-          power of the platforms back into the hands of the people. But is it
-          really fulfilling its promise?
-        </p>
-        <a
-          href=""
-          class="bg-SoftRed text-white py-4 px-7 inline-block my-7 uppercase font-bold outline-none -tracking-[-6px] hover:bg-VeryDarkBlue"
-          >Read more</a
-        >
-      </article>
+    <section class="m-5 lg:flex lg:gap-5">
+      <div>
+        <img src="/image-web-3-desktop.jpg" alt="" />
+        <div class="lg:flex lg:mt-24 lg:justify-between">
+          <h1 class="text-5xl font-extrabold my-6 lg:my-0 lg:flex-1">
+            The Bright Future of Web 3.0?
+          </h1>
+          <di class="lg:flex lg:flex-col lg:flex-1">
+            <p class="text-DarkGrayishBlue">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <a
+              href=""
+              class="bg-SoftRed text-white py-4 px-7 inline-block my-7 uppercase font-bold outline-none -tracking-[-6px] hover:bg-VeryDarkBlue lg:max-w-max"
+              >Read more</a
+            >
+          </di>
+        </div>
+      </div>
       <div class="bg-VeryDarkBlue text-white p-5">
         <h2 class="text-SoftOrange text-2xl font-bold my-3">News</h2>
         <article class="py-5 border-b-[1px] border-OffWhite pb-5">
@@ -66,7 +70,7 @@ const info = [
         </article>
       </div>
     </section>
-    <section class="my-9 mx-5 flex flex-col gap-8">
+    <section class="my-9 mx-5 flex flex-col gap-8 lg:flex-row">
       {
         info.map((item) => (
           <Card
